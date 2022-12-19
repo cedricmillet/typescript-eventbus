@@ -2,6 +2,8 @@
 
 A zero-dependency 100% tested eventbus library written with TypeScript.
 
+![schema](docs/intro_schema.png)
+
 ## Test / build
 ```bash
 yarn install
