@@ -1,7 +1,9 @@
-export interface IEvent {
-    readonly name : string;
+export interface IEvent<T> {
     getName() : string;
-    addHandler() : void;
+    addHandler(handler:any) : T;
     post(...data : any[]) : void;
-    handlers : ((...params:any[]) => void)[];
+    
+    // Private properties...
+    // readonly name : string;
+    // handlers : ((...params:any[]) => void)[];
 }

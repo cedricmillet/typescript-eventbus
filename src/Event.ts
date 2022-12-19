@@ -1,4 +1,6 @@
-export class Event {
+import { IEvent } from "./interfaces/Event.interface";
+
+export class Event implements IEvent<Event> {
     /**
      * Event Name
      */
@@ -12,13 +14,16 @@ export class Event {
     constructor(name:string) {
         this.name = name;
     }
+    
+    public addHandler(handler: any): Event {
+        this.handlers.push(handler);
+        return this;
+    }
+
 
     public getName = () : string => this.name;
 
-    public addHandler(handler:any) : this {
-        this.handlers.push(handler);
-        return this;
-    } 
+
 
     public post(...data : any[]) {
         for(const handler of this.handlers) {
