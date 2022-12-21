@@ -47,7 +47,7 @@ Post any data type (string, number, objects...) to all subscribers of provided e
 
 ### register(eventName)
 
-Declare a new event by string `eventName`
+Declare a new event by `eventName`
 
 ### clear()
 
